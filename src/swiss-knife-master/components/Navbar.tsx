@@ -22,17 +22,18 @@ export const Navbar = () => {
           <Link href={baseURL}>
             <HStack spacing={"4"}>
               <Image w="3rem" alt="icon" src="/icon.png" rounded={"lg"} />
-              <Text>Swiss Knife</Text>
+              <Text>ChainSecLab</Text>
             </HStack>
           </Link>
         </Heading>
       </Center>
       <Flex flex="1" justifyContent="flex-end" pr="1rem" pt="1rem">
         <ChakraLink
-          href={"https://github.com/swiss-knife-xyz/swiss-knife"}
+          href={"https://github.com/LBiyou/Treasure-Chest"}
           isExternal
         >
-          <FontAwesomeIcon icon={faGithub} size="2x" />
+          
+          <FontAwesomeIcon icon={faGithub} size="2x" /> 
         </ChakraLink>
       </Flex>
     </Flex>

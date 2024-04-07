@@ -30,13 +30,13 @@ export const Footer = () => {
             <Heading size="md">
               <Link
                 color={"white"}
-                href="https://twitter.com/swissknifexyz"
+                href="https://twitter.com/biyou177209"
                 isExternal
               >
                 <HStack>
                   <FontAwesomeIcon icon={faTwitter} size="lg" />
                   {"  "}
-                  <Text display="inline">@swissknifexyz</Text>{" "}
+                  <Text display="inline">@BY_DLIFE</Text>{" "}
                   <ExternalLinkIcon />
                 </HStack>
               </Link>
@@ -45,7 +45,7 @@ export const Footer = () => {
           <Center>
             <Link
               href={"https://discord.gg/w9uDexf9vR"}
-              color="twitter.200"
+              color="twitter.300"
               isExternal
             >
               <FontAwesomeIcon icon={faDiscord} size="2x" />
