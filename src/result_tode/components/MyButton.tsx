@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const MyButton: React.FC<{ onClick: () => void }> = ({ onClick }) => {
+export const MyButton: React.FC<{ onClick: () => void, buttonText: string }> = ({ onClick, buttonText }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -23,7 +23,7 @@ export const MyButton: React.FC<{ onClick: () => void }> = ({ onClick }) => {
                 transitionDuration: '0.4s',
             }}
         >
-            Generate Signatures
+            {buttonText}
         </button>
     );
 };

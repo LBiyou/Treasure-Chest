@@ -8,8 +8,10 @@ const subdomains = {
   STORAGE_SLOTS: "storage-slots",
   UNISWAP: "uniswap",
   CHARACTER_COUNT: "character-counter",
-  TEST: "test1",
-  SIGNATURE: "signature"
+  SIGNATURE: "signature",
+  ACCOUNTCREATE: "AccountCreate",
+  CALADDRESSBYCREATE2: "CalAddressByCreate2",
+  PRIVATEKEYTOPUBLICKEY: "PriKeyToPubKey",
 };
 
 module.exports = subdomains;

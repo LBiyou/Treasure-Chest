@@ -45,9 +45,7 @@ const SignatureGenerator: React.FC<SignatureGeneratorProps> = ({ defaultNumSigna
         const newSignatures = batchSign(numSignatures, PKey, MessageHash);
         setSignatures(newSignatures);
     };
-
     return (
-
         <>
         <Heading color={"custom.pale"}>Batch Sign</Heading>
       <Table mt={"3rem"} variant={"unstyled"}>
@@ -88,7 +86,7 @@ const SignatureGenerator: React.FC<SignatureGeneratorProps> = ({ defaultNumSigna
             </Td>
           </Tr>
           <Tr style={{ display: 'flex', justifyContent: 'center' }}>
-            <MyButton onClick={handleGenerate}/>
+            <MyButton onClick={handleGenerate} buttonText="Generate Signatures"/>
           </Tr>
           <Tr>
           <ul>

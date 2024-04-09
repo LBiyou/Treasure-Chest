@@ -17,8 +17,10 @@ const subdomainToLabel = {
   [subdomains.STORAGE_SLOTS]: "Storage Slots",
   [subdomains.UNISWAP]: "Uniswap V3",
   [subdomains.CHARACTER_COUNT]: "Character Counter",
-  [subdomains.TEST]: "Test",
-  [subdomains.SIGNATURE]: "Signature"
+  [subdomains.SIGNATURE]: "Signature",
+  [subdomains.ACCOUNTCREATE]: "AccountCreate",
+  [subdomains.CALADDRESSBYCREATE2]: "CalAddressByCreate2",
+  [subdomains.PRIVATEKEYTOPUBLICKEY]: "PriKeyToPubKey"
   
 };
 
