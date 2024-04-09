@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import SignatureGenerator  from "../../../components/Signature/batchsign";
 
-const ETHUnitConverter = () => {
+const BatchSign = () => {
 
   return (
     <SignatureGenerator/>
   );
 };
 
-export default ETHUnitConverter;
+export default BatchSign;

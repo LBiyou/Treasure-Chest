@@ -18,7 +18,7 @@ const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar
           heading="Signture"
           items={SidebarItems}
-          subdomain={subdomains.CONVERTER}
+          subdomain={subdomains.SIGNATURE}
         />
         <Center flexDir={"column"} w="full">
           {children}

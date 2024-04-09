@@ -51,22 +51,22 @@ const SignatureGenerator: React.FC<SignatureGeneratorProps> = ({ defaultNumSigna
       <Table mt={"3rem"} variant={"unstyled"}>
         <Tbody>
           <Tr>
-            <Label>numSignatures</Label>
+            <Label>NumSignatures</Label>
             <Td>
               <InputField
                 autoFocus
                 type="number"
-                placeholder="numSignatures"
+                placeholder="NumSignatures"
                 onChange={(e) => setNumSignatures(Number(e.target.value))}
               />
             </Td>
           </Tr>
           <Tr>
-            <Label>privateKey</Label>
+            <Label>PrivateKey</Label>
             <Td>
               <InputField
                 type="string"
-                placeholder="privateKey"
+                placeholder="PrivateKey"
                 onChange={(e) =>
                     setPKey(e.target.value)
                 }
