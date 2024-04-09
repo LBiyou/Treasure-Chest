@@ -9,9 +9,9 @@ const subdomains = {
   UNISWAP: "uniswap",
   CHARACTER_COUNT: "character-counter",
   SIGNATURE: "signature",
-  ACCOUNTCREATE: "AccountCreate",
-  CALADDRESSBYCREATE2: "CalAddressByCreate2",
-  PRIVATEKEYTOPUBLICKEY: "PriKeyToPubKey",
+  ACCOUNTCREATE: "accountcreate",
+  CALADDRESSBYCREATE2: "caladdressbycreate2",
+  PRIVATEKEYTOPUBLICKEY: "prikeytopubkey",
 };
 
 module.exports = subdomains;

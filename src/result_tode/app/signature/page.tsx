@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { getPath } from "@/utils";
 import subdomains from "@/subdomains";
 
-const Converter = () => {
+const Signature = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -15,4 +15,4 @@ const Converter = () => {
   return <></>;
 };
 
-export default Converter;
+export default Signature;

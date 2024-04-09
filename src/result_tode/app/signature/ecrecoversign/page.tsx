@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import EcRecoverSign  from "../../../components/Signature/ecrecoversign";
 
-const ETHUnitConverter = () => {
+const Ecrecoversign = () => {
 
   return (
     <EcRecoverSign/>
   );
 };
 
-export default ETHUnitConverter;
+export default Ecrecoversign;

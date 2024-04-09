@@ -26,7 +26,7 @@ const subdomainToLabel = {
 
 const Btn = ({ subdomain }: { subdomain: string }) => (
   <GridItem>
-    <Link href={getPath(subdomain)}>
+    <Link href={getPath(subdomain)}> 
       <DarkButton w="100%">
         {subdomainToLabel[subdomain] ?? subdomain}
       </DarkButton>
