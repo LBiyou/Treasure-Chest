@@ -50,12 +50,17 @@ const EcRecoverSign: React.FC = () => {
                     <MyButton onClick={handleSign} buttonText="Sign"/>
                 </Tr>
 
-                    {signature && (
-                <>
-                    <h2>Signature:</h2>
-                    <p>{JSON.stringify(signature, null, 2)}</p>
-                </>
-            )}
+                {signature && (
+    <>
+        <h2>Signature:</h2>
+        <p>Message: {signature.message}</p>
+        <p>Message Hash: {signature.messageHash}</p>
+        <p>v: {signature.v}</p>
+        <p>r: {signature.r}</p>
+        <p>s: {signature.s}</p>
+        <p>Signature: {signature.signature}</p>
+    </>
+)}
 
                         
                 </Tbody>
