@@ -9,7 +9,7 @@ const SidebarItems: SidebarItem[] = [
   { name: "CalAddressByCreate2", path: "caladdressbycreate2" },
 ];
 
-const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
+const CalAddressByCreate2Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
       <HStack alignItems={"stretch"} h="full">
@@ -26,4 +26,4 @@ const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ConverterLayout;
+export default CalAddressByCreate2Layout;

@@ -9,14 +9,14 @@ const SidebarItems: SidebarItem[] = [
   { name: "PriKeyToPubKey", path: "prikeytopubkey" },
 ];
 
-const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
+const PrivateKeyToPublicKeyLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
       <HStack alignItems={"stretch"} h="full">
         <Sidebar
           heading="PriKeyToPubKey"
           items={SidebarItems}
-          subdomain={subdomains.SIGNATURE}
+          subdomain={subdomains.PRIVATEKEYTOPUBLICKEY}
         />
         <Center flexDir={"column"} w="full">
           {children}
@@ -26,4 +26,4 @@ const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ConverterLayout;
+export default PrivateKeyToPublicKeyLayout;

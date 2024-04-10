@@ -1,5 +1,5 @@
 import Wallet from 'ethereumjs-wallet';
-import EthUtil from 'ethereumjs-util';
+import * as EthUtil from 'ethereumjs-util';
 import React, { useState } from 'react';
 import { Heading, Table, Tbody, Tr, Td } from "@chakra-ui/react";
 import { InputField } from "@/components/InputField";
@@ -47,23 +47,16 @@ const PriKeyToPubKey: React.FC = () => {
         </Tr>
 
         {/** 如下是返回内容 */}
-        {privateKey && (
-        <div>
-          <p>Private Key: {publicKey}</p>
-          <p>Address: {address}</p>
-        </div>
-      )}
-
+{/** 如下是返回内容 */}
+    {publicKey && address && (
+    <div>
+      <p>Public Key: {publicKey}</p>
+      <p>Address: {address}</p>
+    </div>
+    )}
         </Tbody>
     </Table>
     </>
-    // <div>
-    //   <label>Private Key:</label>
-    //   <input type="text" value={privateKey} onChange={(e) => setPrivateKey(e.target.value)} />
-    //   <button onClick={handleConvert}>Convert</button>
-    //   <p>Public Key: {publicKey}</p>
-    //   <p>Address: {address}</p>
-    // </div>
   );
 
 }

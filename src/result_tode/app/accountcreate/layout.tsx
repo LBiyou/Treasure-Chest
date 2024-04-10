@@ -9,7 +9,7 @@ const SidebarItems: SidebarItem[] = [
   { name: "AccountCreate", path: "accountcreate" },
 ];
 
-const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
+const AccountCreateLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
       <HStack alignItems={"stretch"} h="full">
@@ -26,4 +26,4 @@ const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ConverterLayout;
+export default AccountCreateLayout;

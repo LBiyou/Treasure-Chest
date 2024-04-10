@@ -11,7 +11,7 @@ const SidebarItems: SidebarItem[] = [
   { name: "SignData", path: "signdata" }
 ];
 
-const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
+const SignatureLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
       <HStack alignItems={"stretch"} h="full">
@@ -28,4 +28,4 @@ const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ConverterLayout;
+export default SignatureLayout;
