@@ -4,7 +4,7 @@ import { randomBytes } from 'crypto';
 import { Heading, Table, Tbody, Tr, Td } from "@chakra-ui/react";
 import { InputField } from "@/components/InputField";
 import { Label } from "@/components/Label";
-import { MyButton } from "@/components/MyButton";
+import { MyButton } from "@/components/MyButtonPro";
 
 type Signature = {
     signatureHex: string;

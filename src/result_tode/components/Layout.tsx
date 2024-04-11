@@ -16,14 +16,15 @@ export const Layout = ({ children }: LayoutParams) => {
         
         <Container mt="8" minW="70vw">
           <Flex
-            flexDir={"column"}
-            mt="1rem" // logo距离白框的距离
-            p="4"
-            h="full"
-            border="3px" // 这里是界面的白框粗细
-            borderColor={"whiteAlpha.700"} 
-            borderStyle={"ridge"} // 这里是框框的形状
-            rounded={"lg"}
+            flexDirection="column" // 设置 flex 容器的主轴方向为垂直方向
+            marginTop="2rem" // 设置上边距，logo与上方元素的距离为1个rem单位
+            padding="16" // 设置内边距，值为4，这取决于使用的主题或设计系统
+            height="100%" // 设置元素高度为父元素的100%
+            borderWidth="4px" // 设置边框的宽度为3像素
+            borderColor="whiteAlpha.800" // 设置边框颜色，使用白色的70%不透明度
+            borderStyle="solid" //将边框样式改为实线
+            borderRadius="xl" // 增大圆角半径以创造更柔和的边缘外观
+            boxShadow="lg" // 添加大型的阴影效果，为组件增添深度和立体感
           >
             {children}
           </Flex>

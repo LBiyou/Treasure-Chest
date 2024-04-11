@@ -14,69 +14,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ethers } from "ethers";
+import Web3 from 'web3'; // 引入 web3 模块
 import { Layout } from "@/components/Layout";
 import { DarkSelect } from "@/components/DarkSelect";
 import { SelectedOptionState } from "@/types";
 import networkInfo from "@/data/networkInfo";
-import TabsSelector from "@/components/Tabs/TabsSelector";
-import { chainIdToChain } from "@/data/common";
 
-const networkOptions: { label: string; value: number }[] = networkInfo.map(
-  (n, i) => ({
-    label: n.name,
-    value: i, // index in the networkInfo array
-  })
-);
-
-const EIP1967Options = ["implementation", "admin", "beacon", "rollback"];
-
-const Txt = ({ str, colorScheme }: { str: string; colorScheme: string }) => (
-  <Text
-    style={{
-      marginLeft: "0",
-    }}
-    color={`${colorScheme}.300`}
-  >
-    {str}
-  </Text>
-);
-
-const EIP1967Select = ({
-  EIP1967Options,
-  selectedEIP1967Slot,
-  setSelectedEIP1967Slot,
-}: {
-  EIP1967Options: string[];
-  selectedEIP1967Slot: SelectedOptionState;
-  setSelectedEIP1967Slot: (value: SelectedOptionState) => void;
-}) => {
-  return (
-    <Center mt={10}>
-      <HStack fontWeight={"bold"}>
-        <Txt colorScheme="orange" str={`bytes32(`} />
-        <Txt colorScheme="pink" str={`uint256(`} />
-        <Txt colorScheme="red" str={`keccak256(`} />
-        <Txt colorScheme="green" str={`'eip1967.proxy.`} />
-        <DarkSelect
-          boxProps={{
-            minW: "14rem",
-          }}
-          isCreatable
-          selectedOption={selectedEIP1967Slot}
-          setSelectedOption={setSelectedEIP1967Slot}
-          options={EIP1967Options.map((str) => ({
-            label: str,
-            value: str,
-          }))}
-        />
-        <Txt colorScheme="green" str={`'`} />
-        <Txt colorScheme="red" str={`)`} />
-        <Txt colorScheme="pink" str={`) - 1`} />
-        <Txt colorScheme="orange" str={`)`} />
-      </HStack>
-    </Center>
-  );
-};
 
 const StorageSlotInput = ({
   storageSlot,
@@ -127,7 +70,7 @@ const Query = ({ query }: { query: () => {} }) => {
         }}
         isLoading={isLoading}
       >
-        Query
+        Get
       </Button>
     </Center>
   );
@@ -204,14 +147,21 @@ const Result = ({
   );
 };
 
-const StorageSlots = () => {
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
-  const [selectedEIP1967Slot, setSelectedEIP1967Slot] =
-    useState<SelectedOptionState>({
-      label: EIP1967Options[0],
-      value: EIP1967Options[0],
-    });
+//核心脚本
+const getSlotScript = async (rpcURL: string, address: string, slot: number): Promise<string> => {
+    const web3 = new Web3(rpcURL); // 创建一个 web3 实例，连接 Infura 节点
+    const value: string = await web3.eth.getStorageAt(address, slot);
+    return value;
+}
 
+const networkOptions: { label: string; value: number }[] = networkInfo.map(
+  (n, i) => ({
+    label: n.name,
+    value: i, // index in the networkInfo array
+  })
+);
+
+const StorageSlots = () => {
   const [address, setAddress] = useState<string>();
   const [selectedNetworkOption, setSelectedNetworkOption] =
     useState<SelectedOptionState>(networkOptions[0]);
@@ -228,31 +178,17 @@ const StorageSlots = () => {
       setResult({ error: "Address is invalid" });
       return;
     }
-
-    const provider = new ethers.JsonRpcProvider(
-      chainIdToChain[
-        networkInfo[parseInt(selectedNetworkOption!.value.toString())].chainID
-      ]?.rpcUrls.default.http[0]
-    );
-    let _storageSlot =
-      selectedTabIndex === 0
-        ? getEIP1967StorageSlot(selectedEIP1967Slot!.value.toString())
-        : storageSlot;
-
+    const rpc = networkInfo[parseInt(selectedNetworkOption!.value.toString())].api
+    let _storageSlot = storageSlot;
     if (!_storageSlot) {
       setResult({ error: "Storage slot not entered." });
       return;
     }
-
     try {
-      const res = await provider.getStorage(address, _storageSlot);
-
-      _storageSlot = _storageSlot.toString(16);
-      // add 0x in the beginning if doesn't exist (as returned via getEIP1967StorageSlot)
+      const res = await getSlotScript(rpc, address, Number(_storageSlot));
       if (_storageSlot.substring(0, 2) !== "0x") {
         _storageSlot = `0x${_storageSlot}`;
       }
-
       setResult({
         value: res,
         storageSlot: _storageSlot,
@@ -264,18 +200,12 @@ const StorageSlots = () => {
     }
   };
 
-  const getEIP1967StorageSlot = (key: string) => {
-    const khash = ethers.keccak256(ethers.toUtf8Bytes(`eip1967.proxy.${key}`));
-    const num = BigInt(khash);
-    const storageSlot = num - BigInt(1);
-    return storageSlot;
-  };
 
   return (
     <Layout>
       <Box minW={["0", "0", "2xl", "2xl"]}>
         <Heading textAlign="center" pt="2rem">
-          Query Storage Slot
+          Slot-----Storage 
         </Heading>
         <Container>
           <FormControl mt={16}>
@@ -301,30 +231,10 @@ const StorageSlots = () => {
             options={networkOptions}
           />
         </Container>
-        <TabsSelector
-          tabs={["EIP-1967", "Custom"]}
-          selectedTabIndex={selectedTabIndex}
-          setSelectedTabIndex={setSelectedTabIndex}
-        />
-        {(() => {
-          switch (selectedTabIndex) {
-            case 0:
-              return (
-                <EIP1967Select
-                  EIP1967Options={EIP1967Options}
-                  selectedEIP1967Slot={selectedEIP1967Slot}
-                  setSelectedEIP1967Slot={setSelectedEIP1967Slot}
-                />
-              );
-            case 1:
-              return (
                 <StorageSlotInput
                   storageSlot={storageSlot}
                   setStorageSlot={setStorageSlot}
                 />
-              );
-          }
-        })()}
         <Query query={query} />
         {(result?.value || result?.error) && <Result result={result} />}
       </Box>

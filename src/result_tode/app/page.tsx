@@ -1,12 +1,12 @@
-"use client";
+"use client";// 指示这个代码应该只在客户端运行，对于服务端渲染的框架例如 Next.js 来说是一项重要声明
 
 import Link from "next/link";
-import { Box, GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, GridItem, SimpleGrid ,Image, Text } from "@chakra-ui/react";
 import { Layout } from "@/components/Layout";
 import { getPath } from "@/utils";
 import subdomains from "@/subdomains";
 import { DarkButton } from "@/components/DarkButton";
-
+// 将子域的标识映射成可读的文本标签
 const subdomainToLabel = {
   [subdomains.CONSTANTS]: "Constants",
   [subdomains.EPOCH_CONVERTER]: "Epoch Converter",
@@ -24,28 +24,50 @@ const subdomainToLabel = {
   
 };
 
+// 定义一个 Btn 功能组件，接收子域名作为属性，并返回一个 GridItem 包裹的带链接的按钮
 const Btn = ({ subdomain }: { subdomain: string }) => (
   <GridItem>
-    <Link href={getPath(subdomain)}> 
-      <DarkButton w="100%">
-        {subdomainToLabel[subdomain] ?? subdomain}
+    <Link href={getPath(subdomain)}> {/*使用 Link 组件包裹按钮，并用 getPath 函数来获取到对应子域的路径*/}
+      <DarkButton w="300px" style={{flex: '1'} }  > {/*// 使用自定义 DarkButton 组件创建按钮，设置宽度为 100%*/}
+        {subdomainToLabel[subdomain] ?? subdomain} {/*// 显示该子域的标签文本，如果未映射则显示子域名本身*/}
       </DarkButton>
     </Link>
   </GridItem>
 );
 
+// 定义主页组件
+
 const Home = () => {
   return (
-    <Layout>
-      <Box minH="50vh">
-        <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} gap={6}>
+    <Layout> 
+      <Flex 
+        direction="row" 
+        alignItems="flex-start" 
+        justifyContent="space-between" 
+        w="100%" 
+        minH="80vh"
+      >
+
+        <Flex direction="column" w="50%">
           {Object.values(subdomains).map((subdomain, i) => (
-            <Btn key={i} subdomain={subdomain} />
+            <Btn key={i} subdomain={subdomain}/>
           ))}
-        </SimpleGrid>
-      </Box>
+        </Flex>
+        <Box w="40%" textAlign="center">
+          <Image 
+            src="icon2.jpg" 
+            alt="CSL" 
+            w="100%" 
+            h="auto"
+          />
+          <Text fontSize="2xl" fontWeight="bold">ChainSecLab</Text>
+        </Box>
+
+
+      </Flex>
     </Layout>
   );
 };
+
 
 export default Home;
