@@ -1,46 +1,49 @@
 "use client";
 
-import { Heading, Table, Tbody, Th, Thead, Tr, Td } from "@chakra-ui/react";
+import { CopyToClipboard } from "@/components/CopyToClipboard";
 import { Layout } from "@/components/Layout";
 import { constants } from "@/data/constants";
-import { CopyToClipboard } from "@/components/CopyToClipboard";
+import { Heading, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 
 // TODO: custom metadata title based on current page
 const Constants = () => {
-  return ( // 返回 JSX 元素
+  return (
     <Layout>
-      <Heading>Constants</Heading>  {/** 渲染标题为 "Constants" */}
-      <Table variant="simple" mt="2rem">  {/** 渲染一个简单样式的表格，上边距为 2rem */}
-        <Thead> 
+      <Heading>Constants</Heading>
+      <Table variant="simple" mt="2rem">
+        <Thead>
           <Tr>
-            <Th>Name</Th>
+            <Th>Type</Th>
             <Th>Value</Th>
             <Th></Th>
           </Tr>
         </Thead>
         <Tbody>
-          {constants.map((c, i) => ( // 遍历常量数组，并渲染表格行
-            <Tr key={i}> 
+          {constants.map((c, i) => (
+            <Tr key={i}>
               <Td>{c.label}</Td>
               <Td
-                maxW="25rem" // 最大宽度为 25rem
-                whiteSpace={"nowrap"} // 不换行
-                overflowX={"auto"} // 横向滚动条
-                sx={{ // 自定义样式
-                  "::-webkit-scrollbar": { // WebKit 浏览器的滚动条样式
-                    h: "12px",  // 水平滚动条高度
+                maxW="20rem" // 单元格的最大宽度设为25rem
+                whiteSpace="nowrap" // 设置文本在单元格内自动换行
+                overflowX="auto" // 隐藏水平滚动条
+                sx={{
+                  "::-webkit-scrollbar": {
+                    height: "10px", // 设置滚动条的高度为10px
                   },
-                  "::-webkit-scrollbar-track ": { // 滚动条轨道样式
-                    bg: "gray.700", // 背景颜色
-                    rounded: "lg",  // 圆角
+                  "::-webkit-scrollbar-track": {
+                    background: "gray.300", // 设置滚动条轨道的背景颜色为浅灰色
+                    borderRadius: "8px", // 设置滚动条轨道的圆角为8px
                   },
-                  "::-webkit-scrollbar-thumb": { // 滚动条滑块样式
-                    bg: "gray.600", // 滑块背景颜色
-                    rounded: "lg", // 圆角
+                  "::-webkit-scrollbar-thumb": {
+                    background: "green.400", // 设置滚动条滑块的背景颜色为亮绿色
+                    borderRadius: "8px", // 设置滚动条滑块的圆角为8px
+                    "&:hover": { // 当鼠标悬停在滚动条滑块上时的样式
+                      background: "green.600", // 悬停时滑块的背景颜色变为更深的绿色
+                    }
                   },
                 }}
               >
-                {c.data} {/** 显示常量的数值 */}
+                {c.data}
               </Td>
               <Td>
                 <CopyToClipboard textToCopy={c.data} />

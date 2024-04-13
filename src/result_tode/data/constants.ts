@@ -6,6 +6,10 @@ export const constants: {
   data: string;
 }[] = [
   {
+    label: "Max Uint256 (Hex)",
+    data: numberToHex(BigInt(MaxUint256)),
+  },
+  {
     label: "Zero Address",
     data: ZeroAddress,
   },
@@ -13,16 +17,9 @@ export const constants: {
     label: "Max Uint256",
     data: MaxUint256.toString(),
   },
-  {
-    label: "Max Uint256 (Hex)",
-    data: numberToHex(BigInt(MaxUint256)),
-  },
+
   {
     label: "Zero Bytes32",
     data: ZeroHash,
-  },
-  {
-    label: "Privatekey=address(1)",
-    data: "...",
   },
 ];

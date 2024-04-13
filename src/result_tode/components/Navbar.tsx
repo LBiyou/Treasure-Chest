@@ -21,7 +21,7 @@ export const Navbar = () => {
         <Heading color="custom.pale" pl="1rem">
           <Link href={baseURL}>
             <HStack spacing={"4"}>
-              <Image w="3rem" alt="icon" src="/icon.png" rounded={"lg"} />
+              <Image w="3rem" alt="icon" src="/icon2.jpg" rounded={"lg"} />
               <Text>ChainSecLab</Text>
             </HStack>
           </Link>

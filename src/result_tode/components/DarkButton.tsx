@@ -12,7 +12,7 @@ export const DarkButton = ({ ...rest }: DarkButtonProps) => (
     bg={"blackAlpha.400"} // 设置按钮的背景颜色为黑色的 40% 透明度
 
     _hover={{ // 使用伪类 _hover 定义按钮的鼠标悬停状态样式，当鼠标悬停在按钮上时，背景颜色变为黑色的 10% 透明度 (bg: "blackAlpha.100")
-      bg: "blackAlpha.100", //
+      bg: "blue.500", //
     }}
 
     border="1px solid" // 设置按钮的边框为 1 像素的实线边框
