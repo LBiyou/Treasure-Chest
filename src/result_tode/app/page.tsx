@@ -10,12 +10,10 @@ import { DarkButton } from "@/components/DarkButton";
 const subdomainToLabel = {
   [subdomains.CONSTANTS]: "Constants",
   [subdomains.EPOCH_CONVERTER]: "Epoch Converter",
-  [subdomains.EXPLORER]: "Explorer",
   [subdomains.CONVERTER]: "Converter",
   [subdomains.TRANSACT]: "Transact",
   [subdomains.CALLDATA]: "Calldata",
   [subdomains.STORAGE_SLOTS]: "Storage Slots",
-  [subdomains.UNISWAP]: "Uniswap V3",
   [subdomains.CHARACTER_COUNT]: "Character Counter",
   [subdomains.SIGNATURE]: "Signature",
   [subdomains.ACCOUNTCREATE]: "AccountCreate",
