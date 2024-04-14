@@ -3,7 +3,7 @@ import * as ethereumjsUtil from 'ethereumjs-util';
 import { Heading, Table, Tbody, Tr, Td } from "@chakra-ui/react";
 import { InputField } from "@/components/InputField";
 import { Label } from "@/components/Label";
-import { MyButton } from "@/components/MyButtonPro";
+import { MyButton } from "@/components/MyButton";
 
 const SignSourceDataComponent: React.FC = () => {
   const [text, setText] = useState<string>('');
