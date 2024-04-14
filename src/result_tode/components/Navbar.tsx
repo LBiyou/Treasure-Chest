@@ -22,7 +22,7 @@ export const Navbar = () => {
           <Link href={baseURL}>
             <HStack spacing={"4"}>
               <Image w="3rem" alt="icon" src="/icon2.jpg" rounded={"lg"} />
-              <Text>ChainSecLab</Text>
+              <Text color="black">ChainSecLab</Text>
             </HStack>
           </Link>
         </Heading>

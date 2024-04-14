@@ -18,11 +18,12 @@ export const Footer = () => {
     <Box
       flexShrink={0}
       mt="6rem"
-      bg={"blackAlpha.500"}
+      bg={"blackAlpha.900"}
       color={"gray.200"}
       borderTop={"solid"}
       borderTopWidth={1}
       borderColor={"custom.greenDarker"}
+
     >
       <Container as={Stack} maxW={"8xl"} py={10}>
         <VStack spacing={5}>
@@ -42,15 +43,7 @@ export const Footer = () => {
               </Link>
             </Heading>
           </Center>
-          <Center>
-            <Link
-              href={"https://discord.gg/w9uDexf9vR"}
-              color="twitter.300"
-              isExternal
-            >
-              <FontAwesomeIcon icon={faDiscord} size="2x" />
-            </Link>
-          </Center>
+         
         </VStack>
       </Container>
     </Box>

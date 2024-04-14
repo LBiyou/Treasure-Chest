@@ -33,7 +33,7 @@ const theme = extendTheme({
       },
       body: {
         bg: "bg.900",
-        color: "white",
+        color: "black",
         fontFamily: "Poppins",
       },
     },
