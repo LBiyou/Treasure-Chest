@@ -1,5 +1,5 @@
 {
-  "name": "swiss-knife",
+  "name": "csl-tools",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -56,20 +56,20 @@
   "devDependencies": {
     "pino-pretty": "^10.2.3"
   },
-  "description": "<img alt=\"Swiss Knife Logo\" src=\".github/logo.png\" />",
+  "description": "<img alt=\"ChainSecLab Logo\" src=\".github/logo.png\" />",
   "main": "next.config.js",
   "directories": {
     "lib": "lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swiss-knife-xyz/swiss-knife.git"
+    "url": "git+https://github.com/jjk812/Treasure-Chest.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/swiss-knife-xyz/swiss-knife/issues"
+    "url": "https://github.com/LBiyou/Treasure-Chest/issues"
   },
-  "homepage": "https://github.com/swiss-knife-xyz/swiss-knife#readme"
+  "homepage": "https://github.com/LBiyou/Treasure-Chest/blob/main/README.md"
 }

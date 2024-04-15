@@ -21,7 +21,7 @@ const nextConfig = {
           has: [
             {
               type: "host",
-              value: `${subdomain}.swiss-knife.xyz`,
+              value: `${subdomain}.ChainSecLab.xyz`,
             },
           ],
           destination: `/${subdomain}/:path*`,
