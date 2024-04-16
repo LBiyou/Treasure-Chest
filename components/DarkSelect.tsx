@@ -97,10 +97,15 @@ export const DarkSelect = ({
                 bg: selectHover,
               },
             }),
+            valueContainer: (provided) => ({   // 添加这一部分
+              ...provided,
+              color: "white",
+            }),
           }}
           closeMenuOnSelect
           useBasicStyles
-        />
+          
+          />
       )}
     </Box>
   );

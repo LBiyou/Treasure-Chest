@@ -73,6 +73,7 @@ const Epoch = () => {
           placeholder="0"
           value={futureTimeInput}
           onChange={(e) => setFutureTimeInput(parseFloat(e.target.value))}
+          color="white"
         />
         <DarkSelect
           boxProps={{
@@ -101,6 +102,7 @@ const Epoch = () => {
           placeholder="Timestamp in seconds"
           value={toHumanDateInput}
           onChange={(e) => setToHumanDateInput(parseFloat(e.target.value))}
+          color={"white"}
         />
         <Button
           onClick={() => {
