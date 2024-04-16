@@ -86,7 +86,7 @@ const CalAddressByCreate2Layout: React.FC = () => {
         </Heading>
         <Container>
           <FormControl mt={16}>
-            <FormLabel>Choice</FormLabel>
+            <FormLabel style={{color:'white'}}>Choice</FormLabel>
             <DarkSelect
               boxProps={{
                 w: "100%",
@@ -98,7 +98,7 @@ const CalAddressByCreate2Layout: React.FC = () => {
             />
           </FormControl>
           <FormControl mt={8}>
-            <FormLabel>CreationCode</FormLabel>
+            <FormLabel style={{color:'white'}}>CreationCode</FormLabel>
             <Input
               type="string"
               placeholder="0x6080........"
@@ -107,7 +107,7 @@ const CalAddressByCreate2Layout: React.FC = () => {
             />
           </FormControl>
           <FormControl mt={8}>
-            <FormLabel>DeployerAddress</FormLabel>
+            <FormLabel style={{color:'white'}}>DeployerAddress</FormLabel>
             <Input
               type="string"
               placeholder="0x........."
@@ -116,7 +116,7 @@ const CalAddressByCreate2Layout: React.FC = () => {
             />
           </FormControl>
           <FormControl mt={8}>
-            <FormLabel>Text</FormLabel>
+            <FormLabel style={{color:'white'}}>Text</FormLabel>
             <Input
               type="string"
               placeholder="0x2024"

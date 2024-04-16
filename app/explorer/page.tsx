@@ -68,13 +68,14 @@ const Explorer = () => {
   return (
     <>
       <Container mt={10} pb={10} alignItems="center">
-        <Text>or try these out:</Text>
+        <Text style={{color:'white'}}>or try these out:</Text>
         <Stack
           mt={2}
           direction={{ base: "column", md: "row" }}
           alignItems={{ base: "center", md: "stretch" }}
           spacing={5}
           justifyContent="space-between"
+          style={{color:'white'}}
         >
           <Card
             title="USDC"

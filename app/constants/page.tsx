@@ -9,16 +9,16 @@ import { Heading, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 const Constants = () => {
   return (
     <Layout>
-      <Heading>Constants</Heading>
+      <Heading style={{color:'white'}}>Constants</Heading>
       <Table variant="simple" mt="2rem">
         <Thead>
           <Tr>
-            <Th>Type</Th>
-            <Th>Value</Th>
+            <Th style={{color:'white'}}>Type</Th>
+            <Th style={{color:'white'}}>Value</Th>
             <Th></Th>
           </Tr>
         </Thead>
-        <Tbody>
+        <Tbody style={{color:'white'}}>
           {constants.map((c, i) => (
             <Tr key={i}>
               <Td>{c.label}</Td>

@@ -51,9 +51,9 @@ const ETHUnitConverter = () => {
     <>
       <Heading color={"custom.pale"}>ETH Unit Converter</Heading>
       <Table mt={"3rem"} variant={"unstyled"}>
-        <Tbody>
+        <Tbody style={{color:'white'}}>
           <Tr>
-            <Label>Wei</Label>
+            <Label >Wei</Label>
             <Td>
               <InputField
                 autoFocus
@@ -65,7 +65,7 @@ const ETHUnitConverter = () => {
             </Td>
           </Tr>
           <Tr>
-            <Label>Gwei</Label>
+            <Label >Gwei</Label>
             <Td>
               <InputField
                 type="number"
@@ -80,7 +80,7 @@ const ETHUnitConverter = () => {
             </Td>
           </Tr>
           <Tr>
-            <Label>Ether</Label>
+            <Label style={{color:'white'}}>Ether</Label>
             <Td>
               <InputField
                 type="number"

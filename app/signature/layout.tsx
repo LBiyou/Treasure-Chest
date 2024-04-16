@@ -19,8 +19,9 @@ const SignatureLayout = ({ children }: { children: React.ReactNode }) => {
           heading="Signture"
           items={SidebarItems}
           subdomain={subdomains.SIGNATURE}
+          style={{color:'white'}}
         />
-        <Center flexDir={"column"} w="full">
+        <Center flexDir={"column"} w="full" style={{color:'white'}}>
           {children}
         </Center>
       </HStack>

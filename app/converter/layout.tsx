@@ -21,6 +21,7 @@ const ConverterLayout = ({ children }: { children: React.ReactNode }) => {
           heading="Converters"
           items={SidebarItems}
           subdomain={subdomains.CONVERTER}
+          style={{color:'white'}}
         />
         <Center flexDir={"column"} w="full">
           {children}

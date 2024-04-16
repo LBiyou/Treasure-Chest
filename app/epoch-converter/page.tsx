@@ -31,10 +31,10 @@ const Epoch = () => {
   }, []);
 
   return (
-    <Layout>
-      <Heading>Unix Epoch Timestamp</Heading>
+    <Layout >
+      <Heading style={{color:'white'}}>Unix Epoch Timestamp</Heading>
       <HStack mt="8">
-        <Text>Current timestamp:</Text>
+        <Text style={{color:'white'}}>Current timestamp:</Text>
         <Text color="blue.100">{timestamp}</Text>
         <CopyToClipboard textToCopy={timestamp.toString()} />
       </HStack>
@@ -85,7 +85,7 @@ const Epoch = () => {
             value: str,
           }))}
         />
-        <Text>from now: </Text>
+        <Text style={{color:'white'}}>from now: </Text>
         {futureTimestamp && (
           <>
             <Text color={"blue.200"}>{futureTimestamp}</Text>

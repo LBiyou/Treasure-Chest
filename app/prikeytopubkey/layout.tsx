@@ -9,7 +9,7 @@ const PrivateKeyToPublicKeyLayout = ({ children }: { children: React.ReactNode }
     <Layout>
       <HStack alignItems={"stretch"} h="full">
 
-        <Center flexDir={"column"} w="full">
+        <Center flexDir={"column"} w="full" style={{color:'white'}}>
           {children}
         </Center>
       </HStack>

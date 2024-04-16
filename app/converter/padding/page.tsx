@@ -25,7 +25,7 @@ const Padding = () => {
     <>
       <Heading color={"custom.pale"}>Padding</Heading>
       <Table mt={"3rem"} variant={"unstyled"}>
-        <Tbody>
+        <Tbody style={{color:'white'}}>
           <Tr>
             <Label>Input</Label>
             <Td>

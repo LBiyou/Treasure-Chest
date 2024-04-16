@@ -93,7 +93,7 @@ const Hexadecimal = () => {
     <>
       <Heading color={"custom.pale"}>Hexadecimal Converter</Heading>
       <Table mt={"3rem"} variant={"unstyled"}>
-        <Tbody>
+        <Tbody style={{color:'white'}}>
           <Tr>
             <Label>Hexadecimal</Label>
             <Td>

@@ -68,7 +68,7 @@ const AccountCreateLayout= () => {
     </Heading>
     <Container>
       <FormControl mt={16}>
-        <FormLabel>特定需求</FormLabel>
+        <FormLabel style={{color:'white'}}>特定需求</FormLabel>
         <DarkSelect
           boxProps={{
             w: "100%",
@@ -80,7 +80,7 @@ const AccountCreateLayout= () => {
         />
       </FormControl>
       <FormControl mt={8}>
-        <FormLabel>输入地址预期的内容</FormLabel>
+        <FormLabel style={{color:'white'}}>输入地址预期的内容</FormLabel>
         <Input
           type="string"
           placeholder="0x5a54"

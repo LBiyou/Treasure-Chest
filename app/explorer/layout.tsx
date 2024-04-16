@@ -132,10 +132,10 @@ const ExplorerLayout = ({ children }: { children: ReactNode }) => {
     <Layout>
       <Center flexDir={"column"} mt="5">
         <Heading fontSize={"4xl"}>
-          <Link href={getPath(subdomains.EXPLORER)}>Explorer</Link>
+          <Link href={getPath(subdomains.EXPLORER)} style={{color:'white'}}>Explorer</Link>
         </Heading>
         <HStack mt="1rem" w="60%">
-          <Heading fontSize={"xl"}>Search Address or Transaction</Heading>{" "}
+          <Heading fontSize={"xl"} style={{color:'white'}}>Search Address or Transaction</Heading>{" "}
           <Spacer />
         </HStack>
         <HStack mt="1rem">

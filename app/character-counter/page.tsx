@@ -35,7 +35,7 @@ const CharacterCounter = () => {
           <FormControl mt="1rem">
             <FormLabel>
               <HStack>
-                <Text fontWeight="bold" >Text :</Text>
+                <Text fontWeight="bold" style={{color:'white'}} >Text :</Text>
                 <Spacer />
               </HStack>
             </FormLabel>
@@ -59,7 +59,7 @@ const CharacterCounter = () => {
             ></Textarea>
             <FormLabel mt="1rem">
               <HStack>
-                <Text fontWeight="bold">Characters : {count}</Text>
+                <Text fontWeight="bold" style={{color:'white'}}>Characters : {count}</Text>
               </HStack>
             </FormLabel>
           </FormControl>

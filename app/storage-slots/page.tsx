@@ -31,7 +31,7 @@ const StorageSlotInput = ({
   return (
     <Container mt={10}>
       <FormControl>
-        <FormLabel>Enter storage slot:</FormLabel>
+        <FormLabel style={{color:'white'}}>Enter storage slot:</FormLabel>
         <Input
           autoComplete="off"
           value={storageSlot}
@@ -129,8 +129,8 @@ const Result = ({
                 }))}
               />
             </HStack>
-            <HStack mt={4}>
-              <Text color="whiteAlpha.700">Value:</Text>
+            <HStack mt={4} style={{color:'white'}}>
+              <Text color="whiteAlpha.700" >Value:</Text>
               <Text mt={2}>{formattedResult}</Text>
             </HStack>
 
@@ -140,7 +140,7 @@ const Result = ({
             </Box>
           </>
         ) : (
-          <Text>Error: {result.error}</Text>
+          <Text style={{color:'white'}}>Error: {result.error}</Text>
         )}
       </Box>
     </Container>
@@ -204,12 +204,12 @@ const StorageSlots = () => {
   return (
     <Layout>
       <Box minW={["0", "0", "2xl", "2xl"]}>
-        <Heading textAlign="center" pt="2rem">
+        <Heading textAlign="center" pt="2rem" style={{color:'white'}}>
           Slot-----Storage 
         </Heading>
         <Container>
           <FormControl mt={16}>
-            <FormLabel>Contract Address</FormLabel>
+            <FormLabel style={{color:'white'}}>Contract Address</FormLabel>
             <Input
               autoFocus
               autoComplete="off"

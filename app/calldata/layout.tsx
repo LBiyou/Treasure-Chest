@@ -18,8 +18,9 @@ const CalldataLayout = ({ children }: { children: React.ReactNode }) => {
           heading="Calldata"
           items={SidebarItems}
           subdomain={subdomains.CALLDATA}
+          style={{color:'white'}}
         />
-        <Center flexDir={"column"} w="full">
+        <Center flexDir={"column"} w="full" style={{color:'white'}}>
           {children}
         </Center>
       </HStack>

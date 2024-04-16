@@ -15,7 +15,7 @@ const AddressChecksum = () => {
     <>
       <Heading color={"custom.pale"}>Address Checksum</Heading>
       <Table mt={"3rem"} variant={"unstyled"}>
-        <Tbody>
+        <Tbody style={{color:'white'}}>
           <Tr>
             <Label>Input</Label>
             <Td>

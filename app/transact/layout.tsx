@@ -17,8 +17,9 @@ const TransactLayout = ({ children }: { children: React.ReactNode }) => {
           heading="Transact"
           items={SidebarItems}
           subdomain={subdomains.TRANSACT}
+          style={{color:'white'}}
         />
-        <Center flexDir={"column"} w="full">
+        <Center flexDir={"column"} w="full" style={{color:'white'}}>
           <Flex w="100%" mb="3rem"> {/** 弹性布局容器，用于放置连接按钮 (ConnectButton) */}
             <Spacer /> 
             <ConnectButton />

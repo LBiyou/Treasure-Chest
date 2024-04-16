@@ -1,7 +1,8 @@
 // 从 Next.js 和 Chakra UI 中导入必须的钩子和组件。
 import { useRouter, usePathname } from "next/navigation"; // 导入 Next.js 路由和路径名的钩子。
-import { Box, Flex, Center, Heading } from "@chakra-ui/react"; // 导入 Chakra UI 组件。
+import { Box, Flex, Center, Heading,CSSProperties } from "@chakra-ui/react"; // 导入 Chakra UI 组件。
 import { getPath } from "@/utils"; // 导入一个自定义工具函数，用来获取路径。
+import { Style } from "util";
 
 // 定义 SidebarItem 的 TypeScript 接口，用来为侧边栏中的单个条目指定类型。
 export interface SidebarItem {
@@ -12,10 +13,11 @@ export interface SidebarItem {
 // 扩展 SidebarItem 接口，添加了 subdomain 属性。
 export interface SidebarItemProps extends SidebarItem {
   subdomain: string; // 子域名。
+  style?:Style
 }
 
 // 定义 SidebarItem 组件，它会渲染在侧边栏中的每个条目。
-const SidebarItem = ({ name, subdomain, path }: SidebarItemProps) => {
+const SidebarItem = ({ name, subdomain, path,style }: SidebarItemProps) => {
   const router = useRouter(); // 使用 useRouter 钩子获取路由功能。
   const pathname = usePathname(); // 使用 usePathname 钩子获取当前路径名。
 
@@ -35,6 +37,7 @@ const SidebarItem = ({ name, subdomain, path }: SidebarItemProps) => {
         }}
         bg={pathname.includes(path) ? "blue.200" : undefined}          // 当前路径激活时的背景颜色。
         color={pathname.includes(path) ? "gray.700" : undefined}       // 当前路径激活时的文字颜色。
+        style={style}
       >
         {name}  {/* // 显示条目名称。*/}
       </Flex>
@@ -47,10 +50,12 @@ export const Sidebar = ({
   heading,
   items,
   subdomain,
+style,
 }: {
   heading: string;
   items: SidebarItem[];
   subdomain: string;
+  style:CSSProperties;
 }) => {
   // 返回一个侧边栏布局。
   return (
@@ -79,6 +84,7 @@ export const Sidebar = ({
             name={item.name} // 传递条目名称。
             subdomain={subdomain} // 传递子域。
             path={item.path} // 传递导航路径。
+            style={style}
           />
         ))}
       </Box>

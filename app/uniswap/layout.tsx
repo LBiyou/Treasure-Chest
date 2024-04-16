@@ -17,8 +17,9 @@ const UniswapLayout = ({ children }: { children: React.ReactNode }) => {
           heading="UniswapV3"
           items={SidebarItems}
           subdomain={subdomains.UNISWAP}
+          style={{color:'white'}}
         />
-        <Center flexDir={"column"} w="full">
+        <Center flexDir={"column"} w="full" style={{color:'white'}}>
           {children}
         </Center>
       </HStack>
