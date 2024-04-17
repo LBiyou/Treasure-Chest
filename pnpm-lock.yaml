@@ -74,6 +74,9 @@ dependencies:
   eslint-config-next:
     specifier: 14.0.3
     version: 14.0.3(eslint@8.41.0)(typescript@5.0.4)
+  ethereumjs-util:
+    specifier: 7.1.0
+    version: 7.1.0
   ethereumjs-wallet:
     specifier: ^1.0.2
     version: 1.0.2
@@ -5031,6 +5034,18 @@ packages:
       '@scure/bip39': 1.2.2
     dev: false
 
+  /ethereumjs-util@7.1.0:
+    resolution: {integrity: sha512-kR+vhu++mUDARrsMMhsjjzPduRVAeundLGXucGRHF3B4oEltOUspfgCVco4kckucj3FMlLaZHUl9n7/kdmr6Tw==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      '@types/bn.js': 5.1.5
+      bn.js: 5.2.1
+      create-hash: 1.2.0
+      ethereum-cryptography: 0.1.3
+      ethjs-util: 0.1.6
+      rlp: 2.2.7
+    dev: false
+
   /ethereumjs-util@7.1.5:
     resolution: {integrity: sha512-SDl5kKrQAudFBUe5OJM9Ac6WmMyYmXX/6sTmLZ3ffG2eY6ZIGBes3pEDxNN6V72WyOw4CPD5RomKdsa8DAAwLg==}
     engines: {node: '>=10.0.0'}
@@ -5077,6 +5092,14 @@ packages:
     dependencies:
       bn.js: 4.11.6
       number-to-bn: 1.7.0
+    dev: false
+
+  /ethjs-util@0.1.6:
+    resolution: {integrity: sha512-CUnVOQq7gSpDHZVVrQW8ExxUETWrnrvXYvYz55wOU8Uj4VCgw56XC2B/fVqQN+f7gmrnRHSLVnFAwsCuNwji8w==}
+    engines: {node: '>=6.5.0', npm: '>=3'}
+    dependencies:
+      is-hex-prefixed: 1.0.0
+      strip-hex-prefix: 1.0.0
     dev: false
 
   /event-emitter@0.3.5:
