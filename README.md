@@ -50,7 +50,7 @@
 
 8. Signature：Sign the message.
 
-    - Batch Sign：Multiple signatures: The same message gets different signatures.
+    - Batch Sign：Multiple signatures，The same message gets different signatures.
     - EcRecoverSign：Sign the message, and decompose the signature.
     - SignData：Follow the EIP191 protocol signature.
 
