@@ -32,7 +32,7 @@ const SignSourceDataComponent: React.FC = () => {
 
   return (
     <>
-    <Heading color={"custom.pale"}>EcRecoverSign</Heading>
+    <Heading color={"custom.pale"}>SignData</Heading>
     <Table mt={"3rem"} variant={"unstyled"}>
         <Tbody>
         <Tr>

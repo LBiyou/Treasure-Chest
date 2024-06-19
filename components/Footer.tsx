@@ -31,7 +31,7 @@ export const Footer = () => {
             <Heading size="md">
               <Link
                 color={"white"}
-                href="https://twitter.com/biyou177209"
+                // href="https://twitter.com/biyou177209"
                 isExternal
               >
                 <HStack>
